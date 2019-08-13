@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>539</width>
+    <height>348</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel, QPlainTextEdit, MainWindow, QSpinBox {
+	background-color: black;
+	color: white;
+}
+
+QProgressBar {
+border: 1px solid gray;
+background: black;
+padding: 1px;
+color: white;
+text-align: center;
+}
+
+QProgressBar::chunk:horizontal {
+background: qlineargradient(spread:pad, x1:1, y1:0, x2:0, y2:0, stop:0.0504587 rgba(175, 43, 43, 255), stop:0.977064 rgba(43, 0, 0, 255), stop:0.995413 rgba(43, 0, 0, 255), stop:1 rgba(175, 43, 43, 255));
+color: white;
+text-align: center;
+}
+
+QSpinBox
+{
+    border-width: 2px;
+    border-style: solid;
+    border-color : red;
+}
+
+QSpinBox::up-button, QSpinBox::down-button  {
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0.0504587 rgba(175, 43, 43, 255), stop:0.977064 rgba(43, 0, 0, 255), stop:0.995413 rgba(43, 0, 0, 255), stop:1 rgba(175, 43, 43, 255));
+	color: white;
+}
+
+QPushButton {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0.0504587 rgba(175, 43, 43, 255), stop:0.977064 rgba(43, 0, 0, 255), stop:0.995413 rgba(43, 0, 0, 255), stop:1 rgba(175, 43, 43, 255));
+	color: white;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Faktoriál</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="factInput">
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>20</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Výsledek:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPlainTextEdit" name="factOutput"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="factPauseResume">
+        <property name="text">
+         <string>start</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="factStopBu">
+        <property name="text">
+         <string>stop</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QProgressBar" name="factProgressBar">
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string> Eratosthenovo síto</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="eratInput">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="minimum">
+         <number>2</number>
+        </property>
+        <property name="maximum">
+         <number>9999</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Výsledek:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPlainTextEdit" name="eratOutput"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="eratPauseResume">
+        <property name="text">
+         <string>start</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="eratStop">
+        <property name="text">
+         <string>stop</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QProgressBar" name="eratProgressBar">
+        <property name="maximum">
+         <number>200</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
